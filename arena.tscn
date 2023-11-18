@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8xobb56xfhom"]
+[gd_scene load_steps=4 format=3 uid="uid://b8xobb56xfhom"]
 
 [ext_resource type="PackedScene" uid="uid://cshowco3h88q" path="res://player.tscn" id="1_njps6"]
+[ext_resource type="Script" path="res://arena.gd" id="1_tae4o"]
+[ext_resource type="PackedScene" uid="uid://djo00hyfenx71" path="res://rock.tscn" id="2_5mrou"]
 
 [node name="arena" type="Node2D"]
+script = ExtResource("1_tae4o")
+meteorScene = ExtResource("2_5mrou")
 
 [node name="Player" parent="." instance=ExtResource("1_njps6")]
-position = Vector2(382, 1252)
+position = Vector2(248, 720)
+scale = Vector2(0.48, 0.48)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://djo00hyfenx71"]
+
+[ext_resource type="Script" path="res://rock.gd" id="1_lwgxj"]
+[ext_resource type="Texture2D" uid="uid://cyb8duqyiftqb" path="res://assets/meteor1.png" id="2_gy6xq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0u6x"]
+radius = 14.0357
+
+[node name="rocks" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_lwgxj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gy6xq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i0u6x")
